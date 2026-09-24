@@ -1,0 +1,825 @@
+<mxfile host="Electron" compressed="false" pages="5">
+  <diagram id="page1" name="Fig1 System context">
+    <mxGraphModel dx="2060" dy="1444" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="520" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#222;fontStyle=1;fontFamily=Helvetica;whiteSpace=nowrap;" value="Figure 1. System context: NR NTN modem as the bridge between an Optical Inter-Satellite backhaul and the RF user link" vertex="1">
+          <mxGeometry height="22" width="960" x="20" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=13;fontFamily=Helvetica;arcSize=10;" value="&lt;b&gt;Gateway / Core Network&lt;/b&gt;&lt;br&gt;(terrestrial 5G)" vertex="1">
+          <mxGeometry height="90" width="200" x="20" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=13;fontFamily=Helvetica;arcSize=10;" value="&lt;b&gt;Satellite A&lt;/b&gt;&lt;br&gt;Optical Communication&lt;br&gt;Terminal (OCT) feeder / relay&lt;div&gt;(OISL transmit side)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="200" x="280" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666;dashed=1;verticalAlign=top;align=left;spacingLeft=6;spacingTop=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;arcSize=4;" value="&lt;b&gt;Satellite B - Regenerative NTN payload&lt;/b&gt;" vertex="1">
+          <mxGeometry height="310" width="430" x="560" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=13;fontFamily=Helvetica;arcSize=10;" value="OCT&lt;br&gt;(OISL receive side)" vertex="1">
+          <mxGeometry height="90" width="120" x="580" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=13;fontFamily=Helvetica;arcSize=10;" value="&lt;b&gt;PolarFire NR NTN Modem&lt;/b&gt;&lt;br&gt;Phase 1: NR downlink OFDM TX&lt;br&gt;Phase 2: NR uplink RX&lt;br&gt;RTL datapath + Mi-V RISC-V control&lt;br&gt;migration path: RT PolarFire" vertex="1">
+          <mxGeometry height="170" width="240" x="730" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0d9;strokeColor=#333;fontSize=13;fontFamily=Helvetica;arcSize=10;" value="RF front-end (S-band / Ka-band)" vertex="1">
+          <mxGeometry height="50" width="240" x="730" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=13;fontFamily=Helvetica;arcSize=10;" value="&lt;b&gt;Standard 5G NR UE&lt;/b&gt;&lt;br&gt;(3GPP Rel-17/18 NTN)" vertex="1">
+          <mxGeometry height="90" width="200" x="1020" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="183" as="sourcePoint" />
+            <mxPoint x="280" y="183" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="5" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="153" as="sourcePoint" />
+            <mxPoint x="580" y="153" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="7" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="182.41" as="sourcePoint" />
+            <mxPoint x="740" y="182.41" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="8" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;exitX=0.499;exitY=0.99;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="850" y="270" as="sourcePoint" />
+            <mxPoint x="850" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="9" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="325" />
+            </Array>
+            <mxPoint x="970" y="293" as="sourcePoint" />
+            <mxPoint x="1120" y="228" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="DL (phase 1)" vertex="1">
+          <mxGeometry height="17" width="86" x="1020" y="328" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="UL (phase 2)" vertex="1">
+          <mxGeometry height="17" width="86" x="1020" y="343" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" value="Public context: FSO-Instruments and the Dutch consortium developing PAMI-1 (launch planned 2027) will demonstrate laser communication to ground and to other satellites." vertex="1">
+          <mxGeometry height="17" width="1081" x="27" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" value="Once such links are routed, an on-board NR physical layer is the enabler that connects the optical backhaul to standard terminals." vertex="1">
+          <mxGeometry height="17" width="839" x="27" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" style="rounded=0;fillColor=#dbe7f6;strokeColor=#333;" value="" vertex="1">
+          <mxGeometry height="12" width="16" x="27" y="446" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="Modem (this project)" vertex="1">
+          <mxGeometry height="17" width="137" x="49" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="1" style="rounded=0;fillColor=#e2f0d9;strokeColor=#333;" value="" vertex="1">
+          <mxGeometry height="12" width="16" x="217" y="446" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="RF / board interface" vertex="1">
+          <mxGeometry height="17" width="137" x="239" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="1" style="rounded=0;fillColor=#f2f2f2;strokeColor=#333;" value="" vertex="1">
+          <mxGeometry height="12" width="16" x="407" y="446" as="geometry" />
+        </mxCell>
+        <mxCell id="25" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="External system" vertex="1">
+          <mxGeometry height="17" width="105" x="429" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="W5TD1nT50UPa68jHK84S-25" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;feeder link&lt;/span&gt;" vertex="1">
+          <mxGeometry height="22" width="54" x="220" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="W5TD1nT50UPa68jHK84S-26" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;OISL (laser)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="90" x="490" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="W5TD1nT50UPa68jHK84S-27" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;NR user link&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="90" x="1018" y="300" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page2" name="Fig2 System block diagram">
+    <mxGraphModel dx="3600" dy="1805" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#222;fontStyle=1;fontFamily=Helvetica;whiteSpace=nowrap;" value="Figure 2. System block diagram - 5G NR NTN downlink OFDM transmitter on the PolarFire Splash Kit (MPF300T-1FCG484E)" vertex="1">
+          <mxGeometry height="22" width="943" x="335.5" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=12;fontFamily=Helvetica;arcSize=10;" value="&lt;b&gt;Host PC&lt;/b&gt;&lt;br&gt;MATLAB R2025b&lt;br&gt;5G Toolbox golden model&lt;br&gt;transport block source&lt;br&gt;UDP sender&lt;br&gt;bit-exact comparator" vertex="1">
+          <mxGeometry height="200" width="170" x="-10" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666;verticalAlign=top;align=left;spacingLeft=6;spacingTop=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;arcSize=4;strokeWidth=3;" value="&lt;b&gt;PolarFire Splash Kit&lt;/b&gt;" vertex="1">
+          <mxGeometry height="640" width="1150" x="237" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0d9;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="RJ45&lt;br&gt;1 GbE PHY&lt;br&gt;VSC8541" vertex="1">
+          <mxGeometry height="70" width="110" x="257" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0d9;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="USB-UART&lt;br&gt;(FTDI)" vertex="1">
+          <mxGeometry height="60" width="110" x="257" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0d9;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="FMC LPC&lt;br&gt;XCVR lane 0" vertex="1">
+          <mxGeometry height="60" width="110" x="257" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ece2f5;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="DDR4 x32&lt;br&gt;device" vertex="1">
+          <mxGeometry height="60" width="110" x="257" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="SPI flash&lt;br&gt;PCIe x4 edge&lt;br&gt;(not used)" vertex="1">
+          <mxGeometry height="60" width="110" x="257" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#7EA6E0;verticalAlign=top;align=left;spacingLeft=6;spacingTop=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;arcSize=4;strokeWidth=2;" value="&lt;b&gt;MPF300T FPGA fabric&lt;/b&gt;" vertex="1">
+          <mxGeometry height="530" width="960" x="407" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="RGMII MAC +&lt;br&gt;UDP/IP core&lt;br&gt;(VHDL)" vertex="1">
+          <mxGeometry height="70" width="130" x="437" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="Packet ingress&lt;br&gt;header manager&lt;br&gt;TB assembly + FIFO" vertex="1">
+          <mxGeometry height="70" width="140" x="597" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666;verticalAlign=top;align=left;spacingLeft=6;spacingTop=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;arcSize=4;labelBackgroundColor=default;" value="&lt;b&gt;NR downlink PHY datapath (AXI4-Stream, 122.88 MHz)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="250" width="660" x="437" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="CRC24A/B" vertex="1">
+          <mxGeometry height="60" width="90" x="447" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="537" y="310" as="sourcePoint" />
+            <mxPoint x="552" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="NR LDPC enc&lt;br&gt;BG1 / BG2" vertex="1">
+          <mxGeometry height="60" width="90" x="552" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="18" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="642" y="310" as="sourcePoint" />
+            <mxPoint x="657" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Rate match +&lt;br&gt;interleaver" vertex="1">
+          <mxGeometry height="60" width="90" x="657" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="747" y="310" as="sourcePoint" />
+            <mxPoint x="762" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Scrambler&lt;br&gt;Gold x31" vertex="1">
+          <mxGeometry height="60" width="90" x="762" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="852" y="310" as="sourcePoint" />
+            <mxPoint x="867" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="QAM mapper&lt;br&gt;QPSK-64QAM" vertex="1">
+          <mxGeometry height="60" width="90" x="867" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="957" y="310" as="sourcePoint" />
+            <mxPoint x="972" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="RE mapper&lt;br&gt;PRB grid + DMRS" vertex="1">
+          <mxGeometry height="60" width="90" x="972" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="26" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1007" y="370" />
+              <mxPoint x="947" y="370" />
+            </Array>
+            <mxPoint x="1007" y="340" as="sourcePoint" />
+            <mxPoint x="947" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="IFFT 2048&lt;br&gt;(DFT-agile)" vertex="1">
+          <mxGeometry height="60" width="90" x="902" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="28" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="902" y="420" as="sourcePoint" />
+            <mxPoint x="887" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="29" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="CP insertion&lt;br&gt;OFDM framer" vertex="1">
+          <mxGeometry height="60" width="100" x="787" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="30" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="787" y="420" as="sourcePoint" />
+            <mxPoint x="772" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Interpolation&lt;br&gt;CIC / FIR" vertex="1">
+          <mxGeometry height="60" width="100" x="672" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="32" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="672" y="420" as="sourcePoint" />
+            <mxPoint x="657" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="IQ framer&lt;br&gt;16b I / 16b Q&lt;br&gt;8b10b link layer" vertex="1">
+          <mxGeometry height="60" width="110" x="547" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="34" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" value="Math blocks: LDPC parity, IFFT butterflies, FIR taps   |&amp;nbsp;&lt;div&gt;&amp;nbsp;LSRAM: LDPC base graphs, RE grid, IFFT buffers&lt;/div&gt;" vertex="1">
+          <mxGeometry height="16" width="275" x="657" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="PolarFire XCVR&lt;br&gt;PMA/PCS, 8b10b&lt;br&gt;4.9 Gb/s (of 12.7)" vertex="1">
+          <mxGeometry height="70" width="140" x="437" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0d9;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="Loopback&lt;br&gt;near-end PMA or&lt;br&gt;external FMC" vertex="1">
+          <mxGeometry height="70" width="130" x="607" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="IQ deframer&lt;br&gt;capture engine&lt;br&gt;(RX side of lane)" vertex="1">
+          <mxGeometry height="70" width="140" x="767" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ece2f5;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="DDR4 controller&lt;br&gt;capture buffer" vertex="1">
+          <mxGeometry height="70" width="130" x="937" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666;verticalAlign=top;align=left;spacingLeft=6;spacingTop=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;arcSize=4;" value="&lt;b&gt;Control plane (software)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="350" width="230" x="1117" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde9c9;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="&lt;b&gt;Mi-V RISC-V soft core&lt;/b&gt;&lt;br&gt;scheduler, TB config&lt;br&gt;numerology, DMRS, LDPC&lt;br&gt;params, status, logging" vertex="1">
+          <mxGeometry height="100" width="190" x="1137" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde9c9;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="APB register block&lt;br&gt;per-block parameters" vertex="1">
+          <mxGeometry height="60" width="190" x="1137" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="42" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde9c9;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" value="UART console&lt;br&gt;readback / debug" vertex="1">
+          <mxGeometry height="60" width="190" x="1137" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="43" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" value="phase 2: NTN timing advance," vertex="1">
+          <mxGeometry height="16" width="172" x="1137" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="44" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" value="Doppler pre-compensation" vertex="1">
+          <mxGeometry height="16" width="149" x="1137" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Clocking: 122.88 MHz sample domain (CCC/PLL), 125 MHz Ethernet,&lt;br&gt;XCVR reference, DDR4 clock; CDC via AXI4-Stream FIFOs" vertex="1">
+          <mxGeometry height="60" width="300" x="437" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Verification hooks: per-block AXI4-Stream tap points,&lt;br&gt;capture-to-DDR4 of any stage, readback over Ethernet" vertex="1">
+          <mxGeometry height="60" width="300" x="767" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="47" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;exitX=0.991;exitY=0.278;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;startArrow=block;startFill=1;" value="&lt;span&gt;UDP over&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span&gt;1 GbE&lt;/span&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.0149" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="158.47000000000025" y="187.60000000000002" as="sourcePoint" />
+            <mxPoint x="257" y="187" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="48" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="367" y="185" as="sourcePoint" />
+            <mxPoint x="437" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="49" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="567" y="185" as="sourcePoint" />
+            <mxPoint x="597" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="50" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="667" y="220" as="sourcePoint" />
+            <mxPoint x="667" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="transport blocks" vertex="1">
+          <mxGeometry height="16" width="102" x="675" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="52" edge="1" parent="1" source="4" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;labelBackgroundColor=none;startArrow=block;startFill=1;" value="UART">
+          <mxGeometry relative="1" x="-0.0309" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="197" y="280" as="sourcePoint" />
+            <mxPoint x="257" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="53" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="392" y="280" />
+              <mxPoint x="392" y="234" />
+              <mxPoint x="1357" y="234" />
+              <mxPoint x="1357" y="515" />
+            </Array>
+            <mxPoint x="367" y="280" as="sourcePoint" />
+            <mxPoint x="1327" y="515" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54" edge="1" parent="1" source="33" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;" value="IQ stream">
+          <mxGeometry relative="1" x="0.0667" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="507" y="450" as="sourcePoint" />
+            <mxPoint x="507" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="55" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="577" y="565" as="sourcePoint" />
+            <mxPoint x="607" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="56" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="737" y="565" as="sourcePoint" />
+            <mxPoint x="767" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="57" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="907" y="565" as="sourcePoint" />
+            <mxPoint x="937" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="58" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=orthogonalEdgeStyle;rounded=0;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="35" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="387" y="370" />
+              <mxPoint x="387" y="565" />
+            </Array>
+            <mxPoint x="367" y="370" as="sourcePoint" />
+            <mxPoint x="457" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=9;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" value="FMC lane 0: external loopback option" vertex="1">
+          <mxGeometry height="14" width="197" x="250" y="326" as="geometry" />
+        </mxCell>
+        <mxCell id="60" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="312" y="430" as="sourcePoint" />
+            <mxPoint x="312" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="61" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1002" y="625" />
+              <mxPoint x="312" y="625" />
+            </Array>
+            <mxPoint x="1002" y="600" as="sourcePoint" />
+            <mxPoint x="312" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="62" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#a05a00;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1137" y="435" as="sourcePoint" />
+            <mxPoint x="1099" y="435" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="63" parent="1" style="text;html=1;align=right;verticalAlign=middle;fontSize=9;fontColor=#a05a00;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="APB config to all blocks" vertex="1">
+          <mxGeometry height="14" width="135" x="1062" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="64" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#a05a00;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1002" y="510" />
+            </Array>
+            <mxPoint x="1002" y="530" as="sourcePoint" />
+            <mxPoint x="1137" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="65" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#a05a00;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="capture readback" vertex="1">
+          <mxGeometry height="16" width="102" x="1015" y="511" as="geometry" />
+        </mxCell>
+        <mxCell id="66" parent="1" style="rounded=0;fillColor=#dbe7f6;strokeColor=#333;" value="" vertex="1">
+          <mxGeometry height="12" width="16" x="437" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="67" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="RTL (VHDL / HDL Coder)" vertex="1">
+          <mxGeometry height="17" width="150" x="459" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="68" parent="1" style="rounded=0;fillColor=#fde9c9;strokeColor=#333;" value="" vertex="1">
+          <mxGeometry height="12" width="16" x="627" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="69" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="Software (Mi-V)" vertex="1">
+          <mxGeometry height="17" width="105" x="649" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="70" parent="1" style="rounded=0;fillColor=#e2f0d9;strokeColor=#333;" value="" vertex="1">
+          <mxGeometry height="12" width="16" x="817" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="71" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="Board interface" vertex="1">
+          <mxGeometry height="17" width="105" x="839" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="72" parent="1" style="rounded=0;fillColor=#ece2f5;strokeColor=#333;" value="" vertex="1">
+          <mxGeometry height="12" width="16" x="1007" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="73" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="Memory" vertex="1">
+          <mxGeometry height="17" width="48" x="1029" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="74" parent="1" style="rounded=0;fillColor=#f2f2f2;strokeColor=#333;" value="" vertex="1">
+          <mxGeometry height="12" width="16" x="1197" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="75" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="External / infra" vertex="1">
+          <mxGeometry height="17" width="112" x="1219" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="76" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" value="Solid arrows: data plane.  Dashed arrows: control, capture and debug paths." vertex="1">
+          <mxGeometry height="16" width="444" x="437" y="760" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page3" name="Fig3 TX datapath">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="430" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3" value="Figure 3. NR PDSCH transmitter datapath - data types and rates (20 MHz, 30 kHz SCS, 2048-point IFFT)" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#222;fontStyle=1;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="14" width="822" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&lt;b&gt;Transport block&lt;/b&gt;&lt;br&gt;from UDP&lt;br&gt;bits, A up to&lt;br&gt;~40 kbit/slot" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="128" y="128" as="sourcePoint" />
+            <mxPoint x="144" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6" value="&lt;b&gt;CRC24A +&lt;/b&gt;&lt;br&gt;CB segment&lt;br&gt;CRC24B&lt;br&gt;per code block" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="144" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="252" y="128" as="sourcePoint" />
+            <mxPoint x="268" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="&lt;b&gt;NR LDPC enc&lt;/b&gt;&lt;br&gt;BG1 (K&amp;lt;=8448)&lt;br&gt;BG2 (K&amp;lt;=3840)&lt;br&gt;Zc up to 384" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="268" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="376" y="128" as="sourcePoint" />
+            <mxPoint x="392" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="&lt;b&gt;Rate matching&lt;/b&gt;&lt;br&gt;circular buffer&lt;br&gt;bit interleaver&lt;br&gt;rvid 0..3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="392" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="128" as="sourcePoint" />
+            <mxPoint x="516" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="&lt;b&gt;Scrambler&lt;/b&gt;&lt;br&gt;Gold sequence&lt;br&gt;c_init from&lt;br&gt;RNTI, cell ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="516" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="624" y="128" as="sourcePoint" />
+            <mxPoint x="640" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="&lt;b&gt;QAM mapper&lt;/b&gt;&lt;br&gt;Q1.15 I/Q&lt;br&gt;QPSK, 16QAM,&lt;br&gt;64QAM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="640" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="748" y="128" as="sourcePoint" />
+            <mxPoint x="764" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="&lt;b&gt;RE mapper&lt;/b&gt;&lt;br&gt;51 PRB x 12 SC&lt;br&gt;DMRS type 1&lt;br&gt;LSRAM grid" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="764" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="872" y="128" as="sourcePoint" />
+            <mxPoint x="888" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" value="&lt;b&gt;IFFT 2048&lt;/b&gt;&lt;br&gt;Q2.30 internal&lt;br&gt;block floating&lt;br&gt;point" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="888" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="996" y="128" as="sourcePoint" />
+            <mxPoint x="1012" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" value="&lt;b&gt;CP insertion&lt;/b&gt;&lt;br&gt;normal CP&lt;br&gt;144 / 176&lt;br&gt;samples" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1012" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1120" y="128" as="sourcePoint" />
+            <mxPoint x="1136" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="&lt;b&gt;CIC / FIR&lt;/b&gt;&lt;br&gt;interp. x2&lt;br&gt;61.44 to&lt;br&gt;122.88 MSPS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1136" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1244" y="128" as="sourcePoint" />
+            <mxPoint x="1260" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" value="&lt;b&gt;IQ framer&lt;/b&gt;&lt;br&gt;16b I, 16b Q&lt;br&gt;8b10b to&lt;br&gt;XCVR lane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="80" width="108" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="Domain and rate" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#222;fontStyle=1;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="203" width="114" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="bit domain: AXI4-Stream, 8 to 64 bits wide, 122.88 MHz, throughput up to ~90 Mbit/s coded" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="230" width="604" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="symbol domain: 1 complex sample / clock at 61.44 MSPS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="640" y="230" width="372" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="sample domain: 122.88 MSPS, 32 bit/sample, ~3.9 Gb/s raw" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1028" y="230" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="Control (Mi-V via APB): MCS, TB size, BG selection, Zc, rvid, RNTI, cell ID, PRB allocation, DMRS config, numerology (15/30 kHz), IFFT size (1024/2048)." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="289" width="979" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="Verification: every stage has an AXI4-Stream tap that can be redirected to the DDR4 capture buffer and compared with the corresponding 5G Toolbox output." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="309" width="986" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="Fixed-point conventions: Q1.15 constellation, Q2.30 IFFT accumulation with per-stage scaling, saturation and rounding verified against the double-precision model." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="329" width="1043" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="Note: link-layer rate on the XCVR lane after 8b10b is ~4.9 Gb/s, within one PolarFire lane. A decimate-by-2 option keeps a 61.44 MSPS output for lower-rate loopback tests." style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="370" width="1001" height="16" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page4" name="Fig4 MBD and verification ladder">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="470" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3" value="Figure 4. Model-based design and bit-exact verification ladder" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#222;fontStyle=1;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="14" width="513" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="&lt;b&gt;MATLAB 5G Toolbox&lt;/b&gt;&lt;br&gt;nrDLSCH, nrPDSCH&lt;br&gt;nrOFDMModulate&lt;br&gt;golden reference&lt;br&gt;double precision" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="70" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="130" as="sourcePoint" />
+            <mxPoint x="222" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6" value="&lt;b&gt;Simulink fixed-point&lt;/b&gt;&lt;br&gt;same chain in&lt;br&gt;fixed point&lt;br&gt;Q1.15 / Q2.30&lt;br&gt;error budget set" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde9c9;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="222" y="70" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="402" y="130" as="sourcePoint" />
+            <mxPoint x="424" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8" value="&lt;b&gt;HDL Coder R2025b&lt;/b&gt;&lt;br&gt;generic VHDL for&lt;br&gt;DSP blocks&lt;br&gt;no vendor primitives&lt;br&gt;testbench + vectors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="424" y="70" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="604" y="130" as="sourcePoint" />
+            <mxPoint x="626" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="&lt;b&gt;Hand-written VHDL&lt;/b&gt;&lt;br&gt;LDPC encoder&lt;br&gt;UDP/IP, framing&lt;br&gt;APB, capture engine&lt;br&gt;Mi-V integration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="626" y="70" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="806" y="130" as="sourcePoint" />
+            <mxPoint x="828" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="&lt;b&gt;Libero SoC 2024.1&lt;/b&gt;&lt;br&gt;SmartDesign top&lt;br&gt;Synplify Pro, Place&lt;br&gt;and Route, timing&lt;br&gt;SmartDebug" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0d9;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="828" y="70" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1008" y="130" as="sourcePoint" />
+            <mxPoint x="1030" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="&lt;b&gt;Splash Kit hardware&lt;/b&gt;&lt;br&gt;XCVR loopback&lt;br&gt;DDR4 capture&lt;br&gt;Ethernet readback&lt;br&gt;compare vs. model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0d9;strokeColor=#333;fontSize=11;fontFamily=Helvetica;arcSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="70" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="Verification ladder (each rung must pass before the next)" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#222;fontStyle=1;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="218" width="406" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="V1  Block level: HDL Coder co-simulation, each block bit-exact against the Simulink fixed-point model." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="244" width="660" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="V2  Chain level: ModelSim simulation of the full VHDL chain with 5G Toolbox vectors; EVM of the IFFT output against the double model." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="266" width="858" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="V3  Hardware: same vectors sent over Ethernet, captured after loopback in DDR4, read back and compared sample by sample." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="288" width="775" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="V4  Standard conformance: captured waveform demodulated with nrPDSCHDecode in MATLAB; block error rate zero at the tested MCS set." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="310" width="839" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="V5  Performance: resource, timing and power report from Libero; sustained throughput measurement on hardware." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="332" width="705" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="Where SmartHLS is used: candidate for the rate-matching bit-interleaver and DMRS sequence generation; decision after profiling the RTL alternative." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="379" width="947" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="AI tools disclosure (rule 13): documentation and code review assistance; all RTL reviewed, simulated and validated on hardware by the team." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="399" width="896" height="17" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page5" name="Fig5 Bit-exact verification">
+    <mxGraphModel dx="1354" dy="1111" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="660" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#222;fontStyle=1;fontFamily=Helvetica;whiteSpace=nowrap;" value="Figure 5. Bit-exact verification - how the vectors flow from the MATLAB reference to simulation and hardware" vertex="1">
+          <mxGeometry height="22" width="886" x="20" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666;dashed=1;verticalAlign=top;align=left;spacingLeft=6;spacingTop=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;arcSize=4;" value="&lt;b&gt;Reference generation (MATLAB, 5G Toolbox)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="330" width="300" x="20" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Seeded transport block source&lt;br&gt;(PRBS, seed and length in vector header)" vertex="1">
+          <mxGeometry height="46" width="260" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="nrDLSCH, nrPDSCH, nrPDSCHDMRS,&lt;br&gt;nrResourceGrid, nrOFDMModulate&lt;br&gt;one call per stage, outputs kept" vertex="1">
+          <mxGeometry height="60" width="260" x="40" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde9c9;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Simulink fixed-point model&lt;br&gt;same chain, Q1.15 / Q2.30&lt;br&gt;gives the fixed-point expected values" vertex="1">
+          <mxGeometry height="60" width="260" x="40" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ece2f5;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="&lt;b&gt;Vector repository (git)&lt;/b&gt;&lt;br&gt;T0..T8 per test case, .bin + .mat&lt;br&gt;SHA-256 per file, published with the RTL" vertex="1">
+          <mxGeometry height="70" width="260" x="40" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="136" as="sourcePoint" />
+            <mxPoint x="170" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="210" as="sourcePoint" />
+            <mxPoint x="170" y="224" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="284" as="sourcePoint" />
+            <mxPoint x="170" y="298" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666;dashed=1;verticalAlign=top;align=left;spacingLeft=6;spacingTop=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;arcSize=4;" value="&lt;b&gt;Tap points (one per datapath stage)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="330" width="250" x="350" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="T0  transport block bits" vertex="1">
+          <mxGeometry height="17" width="163" x="365" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="T1  CRC + code block segments" vertex="1">
+          <mxGeometry height="17" width="195" x="365" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="T2  LDPC coded bits" vertex="1">
+          <mxGeometry height="17" width="131" x="365" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="T3  rate matched bits" vertex="1">
+          <mxGeometry height="17" width="143" x="365" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="T4  scrambled bits" vertex="1">
+          <mxGeometry height="17" width="124" x="365" y="204" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="T5  QAM symbols (Q1.15)" vertex="1">
+          <mxGeometry height="17" width="156" x="365" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="T6  resource grid (Q1.15)" vertex="1">
+          <mxGeometry height="17" width="169" x="365" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="T7  IFFT + CP samples" vertex="1">
+          <mxGeometry height="17" width="143" x="365" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="T8  interpolated IQ (lane)" vertex="1">
+          <mxGeometry height="17" width="175" x="365" y="324" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" value="T0-T4: bit domain.  T5-T8: fixed-point domain." vertex="1">
+          <mxGeometry height="16" width="276" x="365" y="365" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666;dashed=1;verticalAlign=top;align=left;spacingLeft=6;spacingTop=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;arcSize=4;" value="&lt;b&gt;Consumers of the same vectors&lt;/b&gt;" vertex="1">
+          <mxGeometry height="330" width="670" x="630" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="&lt;b&gt;V1  HDL Coder co-simulation&lt;/b&gt;&lt;br&gt;generated testbench feeds T(i),&lt;br&gt;checks block output against T(i+1)&lt;br&gt;per block, bit-exact" vertex="1">
+          <mxGeometry height="80" width="200" x="650" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="&lt;b&gt;V2  VHDL chain testbench&lt;/b&gt;&lt;br&gt;ModelSim, whole chain, T0 in,&lt;br&gt;every tap written to file,&lt;br&gt;diff against T1..T8" vertex="1">
+          <mxGeometry height="80" width="200" x="870" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2f0d9;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="&lt;b&gt;V3/V4  Hardware&lt;/b&gt;&lt;br&gt;T0 over UDP to Splash Kit,&lt;br&gt;tap i captured to DDR4,&lt;br&gt;read back, diff against T(i)" vertex="1">
+          <mxGeometry height="80" width="190" x="1090" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666;dashed=1;verticalAlign=top;align=left;spacingLeft=6;spacingTop=2;fontStyle=1;fontSize=13;fontFamily=Helvetica;arcSize=4;" value="&lt;b&gt;Hardware path (Figure 2)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="180" width="630" x="650" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Host: UDP send T0&lt;br&gt;+ test-case ID" vertex="1">
+          <mxGeometry height="50" width="120" x="665" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="29" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Datapath&lt;br&gt;stages 1..8" vertex="1">
+          <mxGeometry height="50" width="120" x="805" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde9c9;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Tap select mux&lt;br&gt;APB: tap = i" vertex="1">
+          <mxGeometry height="50" width="120" x="945" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ece2f5;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Capture engine&lt;br&gt;to DDR4 (1 GB)" vertex="1">
+          <mxGeometry height="50" width="120" x="1085" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="32" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="785" y="250" as="sourcePoint" />
+            <mxPoint x="805" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="925" y="250" as="sourcePoint" />
+            <mxPoint x="945" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1065" y="250" as="sourcePoint" />
+            <mxPoint x="1085" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Host comparator&lt;br&gt;MATLAB / Python" vertex="1">
+          <mxGeometry height="50" width="120" x="665" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe7f6;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Readback over UDP (same Ethernet core), 1 GbE&lt;br&gt;Mi-V reports tap, length, CRC32 of the capture" vertex="1">
+          <mxGeometry height="50" width="260" x="945" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="37" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1145" y="275" as="sourcePoint" />
+            <mxPoint x="1145" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="945" y="325" as="sourcePoint" />
+            <mxPoint x="785" y="325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="39" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="T(i) as captured" vertex="1">
+          <mxGeometry height="16" width="102" x="815" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="40" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="333" as="sourcePoint" />
+            <mxPoint x="350" y="333" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="41" edge="1" parent="1" style="endArrow=block;endFill=1;html=1;strokeColor=#333;strokeWidth=1.4;fontSize=11;fontFamily=Helvetica;edgeStyle=none;rounded=0;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="220" as="sourcePoint" />
+            <mxPoint x="630" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="42" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=9;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" value="same files" vertex="1">
+          <mxGeometry height="14" width="62" x="605" y="203" as="geometry" />
+        </mxCell>
+        <mxCell id="43" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#222;fontStyle=1;fontFamily=Helvetica;whiteSpace=nowrap;" value="Pass criteria" vertex="1">
+          <mxGeometry height="19" width="100" x="20" y="403" as="geometry" />
+        </mxCell>
+        <mxCell id="44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Bit domain (T1-T4): zero mismatching bits against the 5G Toolbox output.&lt;br&gt;Any mismatch fails the rung; no tolerance." vertex="1">
+          <mxGeometry height="60" width="420" x="20" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Fixed-point domain (T5-T8): zero mismatching samples against the&lt;br&gt;Simulink fixed-point model; EVM vs. double model within the model budget." vertex="1">
+          <mxGeometry height="60" width="420" x="460" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2f2f2;strokeColor=#333;fontSize=10;fontFamily=Helvetica;arcSize=10;" value="Conformance (V4): captured T7 demodulated with nrPDSCHDecode;&lt;br&gt;block error rate zero for every MCS in the test set." vertex="1">
+          <mxGeometry height="60" width="400" x="900" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="47" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="Test set: QPSK, 16QAM and 64QAM at 51 PRB; BG1 and BG2; redundancy versions 0-3; 15 and 30 kHz numerology; 1024 and 2048-point IFFT; 20 slots per case." vertex="1">
+          <mxGeometry height="17" width="973" x="20" y="509" as="geometry" />
+        </mxCell>
+        <mxCell id="48" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="Reproducibility: the judges receive the vector repository, the testbench scripts and the host comparator; every V1-V4 result can be regenerated from T0 and the seeds." vertex="1">
+          <mxGeometry height="17" width="1069" x="20" y="529" as="geometry" />
+        </mxCell>
+        <mxCell id="49" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#222;fontStyle=0;fontFamily=Helvetica;whiteSpace=nowrap;" value="Why two references: bit-exact comparison needs a reference with the same word lengths (the fixed-point model); the double model bounds the fixed-point error (EVM)." vertex="1">
+          <mxGeometry height="17" width="1049" x="20" y="549" as="geometry" />
+        </mxCell>
+        <mxCell id="50" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#222;fontStyle=2;fontFamily=Helvetica;whiteSpace=nowrap;" value="Note: EVM target to be fixed from the fixed-point model; the 3GPP transmitter EVM limit for 64QAM is 8 percent (TS 38.104), the design target will be well below that." vertex="1">
+          <mxGeometry height="16" width="972" x="20" y="590" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
